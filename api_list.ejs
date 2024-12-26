@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Public APIs</title>
+    <link rel="stylesheet" href="/public/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Public APIs List</h1>
+    </header>
+    <div class="container">
+        <h2>Available APIs:</h2>
+        <ul>
+            <% apis.forEach(api => { %>
+                <li><strong><%= api.API %>:</strong> <%= api.Description %></li>
+            <% }) %>
+        </ul>
+        <button onclick="window.location.href='/'">Back to Home</button>
+    </div>
+</body>
+</html>

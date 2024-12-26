@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>US Data</title>
+    <link rel="stylesheet" href="/public/styles.css">
+</head>
+<body>
+    <header>
+        <h1>US Population Data</h1>
+    </header>
+    <div class="container">
+        <ul>
+            <% data.forEach(item => { %>
+                <li><strong><%= item.Year %>:</strong> <%= item.Population %></li>
+            <% }) %>
+        </ul>
+        <button onclick="window.location.href='/'">Back to Home</button>
+    </div>
+</body>
+</html>

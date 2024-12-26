@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Person Analysis</title>
+    <link rel="stylesheet" href="/public/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Person Analysis for <%= name %></h1>
+    </header>
+    <div class="container">
+        <p><strong>Predicted Age:</strong> <%= age %></p>
+        <p><strong>Predicted Gender:</strong> <%= gender %></p>
+        <p><strong>Predicted Nationality:</strong></p>
+        <ul>
+            <% nationality.forEach(country => { %>
+                <li><%= country.country_id %> (<%= Math.round(country.probability * 100) %>%)</li>
+            <% }) %>
+        </ul>
+        <button onclick="window.location.href='/'">Back to Home</button>
+    </div>
+</body>
+</html>

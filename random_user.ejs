@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random User</title>
+    <link rel="stylesheet" href="/public/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Random User Information</h1>
+    </header>
+    <div class="container">
+        <p><strong>Name:</strong> <%= user.name.first %> <%= user.name.last %></p>
+        <p><strong>Email:</strong> <%= user.email %></p>
+        <p><strong>Location:</strong> <%= user.location.city %>, <%= user.location.country %></p>
+        <img src="<%= user.picture.large %>" alt="Random User" style="border-radius: 50%;">
+        <button onclick="window.location.href='/'">Back to Home</button>
+    </div>
+</body>
+</html>
